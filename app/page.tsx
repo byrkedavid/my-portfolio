@@ -178,10 +178,12 @@ export default function Home() {
 
               <video
                 src="/game.mp4"
-                className="rounded mb-4"
-                muted
-                loop
                 autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                className="rounded mb-4 w-full"
               />
 
               <div className="flex flex-wrap gap-2">
@@ -200,10 +202,12 @@ export default function Home() {
 
               <video
                 src="/arduino.mp4"
-                className="rounded mb-4"
-                muted
-                loop
                 autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                className="rounded mb-4 w-full"
               />
 
               <div className="flex flex-wrap gap-2">
@@ -221,10 +225,12 @@ export default function Home() {
               </p>
               <video
                 src="/react.mov"
-                className="rounded mb-4"
-                muted
-                loop
                 autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                className="rounded mb-4 w-full"
               />
               <div className="flex flex-wrap gap-2">
                 <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">React Native</span>
