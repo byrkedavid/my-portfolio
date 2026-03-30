@@ -181,7 +181,7 @@ useEffect(() => {
             <div className="group rounded-xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 p-8 transition-all duration-300 hover:shadow-lg hover:scale-105 hover:border-blue-500 dark:hover:border-blue-400">
               <h3 className="text-xl font-bold text-black dark:text-white mb-3">2D Java Game</h3>
               <p className="text-zinc-600 dark:text-zinc-400 mb-6">
-                Followed a tutorial to create a 2D Java game implementing a custom game loop, collision detection, and entity-based interactions. Gained experience with real-time logic and structuring game systems.
+                Built a 2D Java game implementing a custom game loop, collision detection, and entity-based interactions. Gained experience with real-time logic and structuring game systems.
               </p>
 
               <video
@@ -235,7 +235,7 @@ useEffect(() => {
               </p>
               <video
                 ref={(el) => { videoRefs.current[2] = el; }}
-                src="/react.mov"
+                src="/react.mp4"
                 autoPlay
                 loop
                 muted
@@ -258,8 +258,25 @@ useEffect(() => {
       <footer className="bg-black dark:bg-zinc-950 text-white px-6 py-8 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto text-center text-zinc-400">
           <p>&copy; {new Date().getFullYear()} David Byrke. All rights reserved.</p>
+          <p>Built using Next.js, Tailwind, and AI-assisted development tools</p>
         </div>
       </footer>
     </div>
   );
 }
+
+{/*
+#to start LocalHost
+
+npm run dev
+
+*/}
+
+{/*
+#to push changes to GitHub:
+
+git add .
+git commit -m "comment"
+git push
+
+*/}
