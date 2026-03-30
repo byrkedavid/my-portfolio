@@ -1,9 +1,17 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Home() {
   const [showContact, setShowContact] = useState(false);
+
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+useEffect(() => {
+  videoRefs.current.forEach((video) => {
+    video?.play().catch(() => {});
+  });
+}, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-black dark:to-zinc-950 font-sans">
@@ -177,13 +185,14 @@ export default function Home() {
               </p>
 
               <video
+                ref={(el) => { videoRefs.current[0] = el; }}
                 src="/game.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
-                className="rounded mb-4 w-full"
+                className="rounded mb-4 w-full pointer-events-none"
               />
 
               <div className="flex flex-wrap gap-2">
@@ -201,13 +210,14 @@ export default function Home() {
               </p>
 
               <video
+                ref={(el) => { videoRefs.current[1] = el; }}
                 src="/arduino.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
-                className="rounded mb-4 w-full"
+                className="rounded mb-4 w-full pointer-events-none"
               />
 
               <div className="flex flex-wrap gap-2">
@@ -224,13 +234,14 @@ export default function Home() {
                 Prototyped a mobile app using React Native to explore improving internal workflows. Focused on UI structure, component-based design, and experimenting with cross-platform development.
               </p>
               <video
+                ref={(el) => { videoRefs.current[2] = el; }}
                 src="/react.mov"
                 autoPlay
                 loop
                 muted
                 playsInline
                 controls={false}
-                className="rounded mb-4 w-full"
+                className="rounded mb-4 w-full pointer-events-none"
               />
               <div className="flex flex-wrap gap-2">
                 <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">React Native</span>
