@@ -9,8 +9,76 @@
   }
 }
 
+@keyframes blueprint-scan {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(900px);
+  }
+}
+
+@keyframes render-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * (36rem * 6 + 1rem * 6)));
+  }
+}
+
 .marquee {
   animation: marquee 30s linear infinite;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px, 12px 12px, 12px 12px;
+}
+
+.software-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.blueprint-scan {
+  animation: blueprint-scan 5s ease-in-out infinite;
+}
+
+.blueprint-sheet-glow {
+  box-shadow:
+    inset 0 0 0 1px rgba(103, 232, 249, 0.28),
+    inset 0 0 42px rgba(8, 145, 178, 0.18);
+}
+
+.render-carousel-track {
+  animation: render-carousel 72s linear infinite;
+  width: max-content;
+}
+
+.render-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  @keyframes render-carousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * (19.5rem * 6 + 1rem * 6)));
+    }
+  }
+
+  .render-carousel-track {
+    animation-duration: 46s;
+  }
 }
 
 html {

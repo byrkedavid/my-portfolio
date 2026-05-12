@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "David Byrke - Portfolio",
-  description: "Created by David Byrke using Next.js 13, Tailwind CSS, and TypeScript.",
+  title: "David Byrke - Portfolios",
+  description: "Software and architectural drafting portfolios for David Byrke.",
 };
 
 export default function RootLayout({
