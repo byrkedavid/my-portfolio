@@ -17,7 +17,7 @@ const galleryItems = [
   },
   {
     title: "Exterior Rendering",
-    src: "/drafting/exteriors/PEC Exterior Rendering 11-6-24.jpg",
+    src: "/drafting/exteriors/PEC_exterior.jpg",
     alt: "Sample project two exterior rendering",
     width: 3680,
     height: 2070,
