@@ -179,6 +179,10 @@ const software = [
     icon: "/drafting/software_icons/sketchup-icon.svg",
   },
   {
+    name: "Excel",
+    icon: "/drafting/software_icons/microsoft-excel-icon.svg",
+  },
+  {
     name: "Enscape",
     icon: "/drafting/software_icons/Enscape-Logo-Icon.webp",
   },
@@ -189,10 +193,6 @@ const software = [
   {
     name: "Bluebeam",
     icon: "/drafting/software_icons/62e9bd9c-0595-4480-a12d-8945e65acba4.jpg",
-  },
-  {
-    name: "Excel",
-    icon: "/drafting/software_icons/microsoft-excel-icon.svg",
   },
 ];
 
@@ -245,11 +245,11 @@ export default function DraftingPortfolio() {
               <a href="/" className="font-semibold tracking-wide transition hover:text-white">
                 David Byrke
               </a>
-              <div className="flex items-center gap-2">
-                <a href="#work" className="rounded-full border border-cyan-200/30 px-4 py-2 transition hover:border-cyan-100 hover:bg-white/10">
+              <div className="flex shrink-0 items-center gap-1.5 text-[12px] sm:gap-2 sm:text-sm">
+                <a href="#work" className="whitespace-nowrap rounded-full border border-cyan-200/30 px-3 py-2 transition hover:border-cyan-100 hover:bg-white/10 sm:px-4">
                   View work
                 </a>
-                <a href="/resumes/drafting-resume.pdf" className="rounded-full bg-cyan-200 px-4 py-2 font-bold text-[#101820] transition hover:bg-white">
+                <a href="/resumes/drafting-resume.pdf" className="whitespace-nowrap rounded-full bg-cyan-200 px-3 py-2 font-bold text-[#101820] transition hover:bg-white sm:px-4">
                   Drafting Resume
                 </a>
               </div>
