@@ -47,20 +47,20 @@ const renderShowcase = [
 
 const exteriorRenders = [
   {
-    src: "/drafting/exteriors/CGA Exterior 1.05.26.png",
-    alt: "CGA exterior architectural rendering",
+    src: "/drafting/exteriors/covacad.jpg",
+    alt: "School gym exterior architectural rendering",
     width: 1920,
     height: 1080,
   },
   {
-    src: "/drafting/exteriors/Front Corner.png",
-    alt: "Front corner exterior rendering",
+    src: "/drafting/exteriors/Front Rendering w window.png",
+    alt: "Front exterior rendering with window study",
     width: 3840,
     height: 2160,
   },
   {
-    src: "/drafting/exteriors/Front Rendering w window.png",
-    alt: "Front exterior rendering with window study",
+    src: "/drafting/exteriors/PEC_exterior.jpg",
+    alt: "Front corner exterior rendering",
     width: 3840,
     height: 2160,
   },
@@ -101,7 +101,7 @@ const interiorRenders = [
 
 const featuredPlanProjects = [
   {
-    name: "Sample Project #1",
+    name: "Commercial Display Room",
     rank: "Featured Project",
     description:
       "Redacted construction drawing excerpts showing a coordinated floor plan, mezzanine planning, exterior elevations, material callouts, dimensions, and sheet organization.",
@@ -125,7 +125,7 @@ const featuredPlanProjects = [
     ],
   },
   {
-    name: "Sample Project #2",
+    name: "Manufacturer HQ",
     rank: "Secondary Project",
     description:
       "Redacted plan and elevation excerpts with office layout coordination, enlarged plan details, building elevations, sections, and accessibility-related drafting notes.",
@@ -208,6 +208,21 @@ const capabilities = [
   {
     label: "Coordination",
     text: "Bluebeam markups, drawing review, takeoff-minded organization, and clear handoff notes for design and build teams.",
+  },
+];
+
+const productionDepth = [
+  {
+    title: "Sheet Organization",
+    text: "Plan previews and PDFs are arranged to show how drawings move from dimensions and elevations into presentation-ready sets.",
+  },
+  {
+    title: "Coordination Mindset",
+    text: "The work emphasizes readable dimensions, redacted title blocks, material callouts, and handoff clarity for review and bidding.",
+  },
+  {
+    title: "Review Workflow",
+    text: "Bluebeam, markups, and takeoff-style thinking support drawing review, issue tracking, and scope clarification.",
   },
 ];
 
@@ -400,6 +415,26 @@ export default function DraftingPortfolio() {
               ))}
             </div>
 
+            <div className="overflow-hidden border border-slate-300 bg-[#101820] text-white">
+              <div className="grid gap-0 lg:grid-cols-[1.25fr_0.75fr]">
+                <Image
+                  src="/drafting/exteriors/CGA Exterior 1.05.26.png"
+                  alt="Large exterior rendering showcase"
+                  width={1920}
+                  height={1080}
+                  sizes="(max-width: 1024px) 100vw, 70vw"
+                  className="h-full min-h-80 w-full object-cover"
+                />
+                <div className="p-8 md:p-10">
+                  <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-200">Render Showcase</p>
+                  <h3 className="mt-4 text-3xl font-black md:text-4xl">Exterior views built for client presentation, material review, and design clarity.</h3>
+                  <p className="mt-5 leading-7 text-slate-200">
+                    The strongest renderings deserve more than thumbnail treatment. This rendering showcases a 27,000 sqft commercial project with a focus on materiality, lighting, and design clarity for client review and coordination.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div>
               <div className="mb-5 flex items-center justify-between gap-4">
                 <h3 className="text-2xl font-black">Exterior Renderings</h3>
@@ -471,6 +506,19 @@ export default function DraftingPortfolio() {
 
       <section className="px-6 py-20 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1fr]">
+          <div className="border border-slate-300 bg-white p-8 md:p-10 lg:col-span-2">
+            <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-700">Production Depth</p>
+            <h2 className="mt-4 text-3xl font-black md:text-4xl">Beyond visuals: organized drawing packages and review-ready documentation.</h2>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {productionDepth.map((item) => (
+                <div key={item.title} className="border-l-2 border-cyan-700 pl-5">
+                  <h3 className="text-lg font-black">{item.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="bg-[#101820] p-8 text-white md:p-10">
             <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-200">Workflow</p>
             <h2 className="mt-4 text-3xl font-black md:text-4xl">From drawing review to clean handoff.</h2>

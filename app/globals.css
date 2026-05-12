@@ -47,6 +47,140 @@
   background-size: 44px 44px;
 }
 
+.terminal-typewriter {
+  position: relative;
+  display: inline-block;
+  height: 1.75rem;
+  min-width: min(24ch, 68vw);
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.terminal-command {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: content-box;
+  width: 0;
+  overflow: hidden;
+  padding-right: 0.85ch;
+  white-space: nowrap;
+  border-right: 0.16rem solid #67e8f9;
+  opacity: 0;
+  animation-duration: 18s, 1s;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: steps(var(--terminal-steps), end), steps(2, start);
+}
+
+.terminal-command-one {
+  --terminal-width: 13.5ch;
+  --terminal-steps: 13;
+  animation-name: terminal-type-one, terminal-cursor-blink;
+}
+
+.terminal-command-two {
+  --terminal-width: 17.5ch;
+  --terminal-steps: 17;
+  animation-name: terminal-type-two, terminal-cursor-blink;
+}
+
+.terminal-command-three {
+  --terminal-width: 14.5ch;
+  --terminal-steps: 14;
+  animation-name: terminal-type-three, terminal-cursor-blink;
+}
+
+@keyframes terminal-type-one {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  8%,
+  25% {
+    width: var(--terminal-width);
+    opacity: 1;
+  }
+  32% {
+    width: 0;
+    opacity: 1;
+  }
+  32%,
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes terminal-type-two {
+  0%,
+  32% {
+    width: 0;
+    opacity: 0;
+  }
+  33% {
+    width: 0;
+    opacity: 1;
+  }
+  41%,
+  58% {
+    width: var(--terminal-width);
+    opacity: 1;
+  }
+  64% {
+    width: 0;
+    opacity: 1;
+  }
+  65%,
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes terminal-type-three {
+  0%,
+  65% {
+    width: 0;
+    opacity: 0;
+  }
+  66% {
+    width: 0;
+    opacity: 1;
+  }
+  74%,
+  91% {
+    width: var(--terminal-width);
+    opacity: 1;
+  }
+  97% {
+    width: 0;
+    opacity: 1;
+  }
+  98%,
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes terminal-cursor-blink {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .terminal-command {
+    animation: none;
+    border-right: 0;
+  }
+
+  .terminal-command-one {
+    width: auto;
+    opacity: 1;
+  }
+}
+
 .blueprint-scan {
   animation: blueprint-scan 5s ease-in-out infinite;
 }

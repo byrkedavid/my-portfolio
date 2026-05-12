@@ -108,7 +108,14 @@ function TerminalMockup() {
         <span className="ml-3 text-xs font-semibold text-slate-400">workflow-automation.log</span>
       </div>
       <div className="space-y-4 p-5 font-mono text-sm leading-7 text-slate-200">
-        <p><span className="text-[#da4947]">$</span> /onsite ATL77</p>
+        <div className="flex items-center gap-2">
+          <span className="text-[#da4947]">$</span>
+          <span className="terminal-typewriter" aria-label="Terminal commands cycling through onsite tracking, daily summary, and dashboard sync commands">
+            <span className="terminal-command terminal-command-one">/onsite ATL77</span>
+            <span className="terminal-command terminal-command-two">run daily-summary</span>
+            <span className="terminal-command terminal-command-three">sync dashboard</span>
+          </span>
+        </div>
         <p className="text-slate-400">status: onsite record created</p>
         <p><span className="text-[#da4947]">$</span> run daily-summary --team infrastructure</p>
         <div className="border border-white/10 bg-black/30 p-4">
