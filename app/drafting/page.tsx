@@ -104,7 +104,7 @@ const featuredPlanProjects = [
     name: "Commercial Display Room",
     rank: "Featured Project",
     description:
-      "Redacted construction drawing excerpts showing a coordinated floor plan, mezzanine planning, exterior elevations, material callouts, dimensions, and sheet organization.",
+      "This 27,000 sqft project features a commercial kitchen showroom, coordinated floor plan with dimensions, mezzanine planning, and more with a clear focus on interior design.",
     pdfHref: "/drafting/plans/CGA_redacted.pdf",
     galleryHref: "/drafting/sample-project-1",
     sheets: [
@@ -128,7 +128,7 @@ const featuredPlanProjects = [
     name: "Manufacturer HQ",
     rank: "Secondary Project",
     description:
-      "Redacted plan and elevation excerpts with office layout coordination, enlarged plan details, building elevations, sections, and accessibility-related drafting notes.",
+      "This 67,000 sqft project features a manufacturer headquarters with office and production spaces, redacted plan sheets with dimensions and notes, and client-facing renderings focused on materiality and design clarity.",
     pdfHref: "/drafting/plans/PEC_redacted.pdf.pdf",
     galleryHref: "/drafting/sample-project-2",
     sheets: [
@@ -218,7 +218,7 @@ const productionDepth = [
   },
   {
     title: "Coordination Mindset",
-    text: "The work emphasizes readable dimensions, redacted title blocks, material callouts, and handoff clarity for review and bidding.",
+    text: "My work emphasizes readable dimensions, redacted title blocks, material callouts, and handoff clarity for review and bidding.",
   },
   {
     title: "Review Workflow",
@@ -261,7 +261,7 @@ export default function DraftingPortfolio() {
                 Buildable drawings with presentation-grade clarity.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-slate-200 lg:max-w-[39rem]">
-                A focused portfolio for residential drafting, technical layouts, and 3D visualization. Built to show the kind of accuracy, organization, and design-to-bid thinking valued in high-end residential electrical and controls work.
+                Hi, I'm David Byrke, an architectural draftsman with 4 years of experience in the commercial world. Here you can find my focused portfolio for commercial architectural drafting, technical layouts, and 3D visualization for past jobs.
               </p>
             </div>
 
@@ -359,7 +359,7 @@ export default function DraftingPortfolio() {
               <h2 className="mt-4 text-4xl font-black md:text-5xl">Renderings, plan sets, and technical visuals.</h2>
             </div>
             <p className="max-w-xl text-slate-600">
-              Redacted drawing sets, project-specific galleries, and rendering work across interior and exterior visualization.
+              Here you can find two projects of mine, showcasing redacted plan sheets, 3D modeling, and client-facing renderings.
             </p>
           </div>
 
