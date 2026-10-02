@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "David Byrke - Portfolios",
-  description: "Software and architectural drafting portfolios for David Byrke.",
+  description: "Data center operations, software, and architectural drafting portfolios for David Byrke.",
 };
 
 export default function RootLayout({
